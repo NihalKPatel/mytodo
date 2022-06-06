@@ -9,16 +9,16 @@ class Show extends Component
 {
     protected $listeners = ['saved'];
 
+    public function saved()
+    {
+        $this->render();
+    }
+
     public function render()
     {
         $list = TodoItem::all()->sortByDesc('created_at');
 
-        return view('livewire.todo.show', [ 'list' => $list ]);
-    }
-
-    public function saved()
-    {
-        $this->render();
+        return view('livewire.todo.show', ['list' => $list]);
     }
 
     public function markAsDone(TodoItem $item)

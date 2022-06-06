@@ -1,4 +1,3 @@
-#resources/views/livewire/todo/form.blade.php
 <x-jet-form-section submit="createItem">
     <x-slot name="title">
         {{ __('Create New To-Do Item') }}
@@ -10,9 +9,10 @@
 
     <x-slot name="form">
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="description" value="{{ __('Item Description') }}" />
-            <x-jet-input id="description" type="text" class="mt-1 block w-full" wire:model.defer="description" autocomplete="description" />
-            <x-jet-input-error for="description" class="mt-2" />
+            <x-jet-label for="description" value="{{ __('Item Description') }}"/>
+            <x-jet-input id="description" type="text" class="mt-1 block w-full" wire:model.defer="description"
+                         autocomplete="description"/>
+            <x-jet-input-error for="description" class="mt-2"/>
         </div>
     </x-slot>
 
